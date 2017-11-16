@@ -14,6 +14,7 @@ if v:progname =~? "evim"
   finish
 endif
 
+execute pathogen#infect()
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -94,3 +95,6 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+set t_Co=256
+set background=dark
+colorscheme PaperColor
