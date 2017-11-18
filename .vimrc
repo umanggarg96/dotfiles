@@ -98,3 +98,6 @@ endif
 set t_Co=256
 set background=dark
 colorscheme PaperColor
+set autoread
+au CursorHold * checktime
+map <F2> :w <CR>
